@@ -136,6 +136,15 @@ body {
 .w-80 {
   width: 200px;
 }
+/* Box */
+.bx {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bx:hover {
+  transform: scale(1.1);
+}
+
 /* Box Shadow */
 .bx-shw {
   box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.15);
@@ -354,10 +363,21 @@ a {
 /*--------------------------------------------------
 [7. Start Our Team]
 --------------------------------------------------*/
+.team {
+  padding: 120px 0 100px;
+  background: url("../img/bg/testimonials.png") center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
 .team .box {
   position: relative;
   border-radius: 15px;
 }
+.team .box img {
+  height: 100px;
+  width: 100px;
+}
+
 .team .box .overlay {
   position: absolute;
   background: -webkit-linear-gradient(top, #8066dc 0%, #5040a0 100%);
@@ -377,6 +397,7 @@ a {
   top: 50%;
   left: 50%;
   margin-top: 80px;
+  margin-right: 20px;
   transform: translate(-50%, -50%);
   padding: 15px 25px;
   border-radius: 50px;
@@ -396,6 +417,7 @@ a {
 }
 .team .box .overlay .social .icon {
   font-size: 20px;
+  margin-right: 20px;
   text-decoration: none;
   color: #8c8b8f;
   padding: 0 5px;
@@ -412,10 +434,14 @@ a {
 [8. Start Testimonials]
 --------------------------------------------------*/
 .testimonials {
-  padding: 120px 0 150px;
-  background: url("../img/bg/testimonials.png") center center no-repeat;
+  padding: 50px 0 50px;
+  /* background: url("../img/bg/testimonials.png") center center no-repeat;
   background-size: cover;
-  color: #ffffff;
+  color: #ffffff; */
+}
+.testimonials .carousel-inner img {
+  height: 100px;
+  width: 100px;
 }
 .testimonials .carousel-item h3 {
   font-size: 20px;
@@ -557,11 +583,39 @@ a {
   background: -webkit-linear-gradient(top left, #8066dc 0%, #5040a0 100%);
   padding: 40px 0;
 }
-.footer h2 {
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0;
-  margin-top: 20px;
+.footer img {
+  height: 50px;
+  margin-right: 10px;
+}
+.footer li a {
+  color: rgba(255, 255, 251, 0.6);
+}
+footer .social a {
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+footer .social a:hover {
+  transform: scale(1.1);
+}
+footer .hover-text-white:hover {
+  color: #fff !important;
+}
+
+footer .text-muted {
+  color: #b0b0b0;
+}
+
+footer .text-white {
+  color: #fff;
+}
+
+/*--------------------------------------------------
+[00. benefits]
+--------------------------------------------------*/
+.benefits {
+  background: -webkit-linear-gradient(top left, #8066dc 0%, #5040a0 100%);
+  box-shadow: 0px 15px 51px 0px rgba(0, 0, 0, 0.24);
+  padding: 40px 40px;
 }
 
 /*--------------------------------------------------
@@ -673,13 +727,49 @@ a {
     transform: scale(1.1);
   }
 
-  .features {
+  /* .features {
     text-align: center;
     padding: 120px 0 80px 0;
   }
   .features .box {
     margin-bottom: 40px;
+  } */
+  .product-card {
+    width: 300px !important; /* Paksa ukuran tetap */
+    max-width: 300px !important;
+    flex: 0 0 300px !important; /* Hentikan Bootstrap dari mengubah ukuran */
   }
+
+  .product-card .card {
+    border: none !important;
+    width: 100% !important; /* Pastikan card mengikuti ukuran parent */
+    height: 400px !important; /* Paksa tinggi tetap */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  .product-card .card:hover {
+    transform: scale(1.05); /* Membesar sedikit saat hover */
+  }
+  .icon-hover {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .icon-hover:hover {
+    transform: scale(1.2);
+  }
+  .box {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+  }
+
   .about .work-img {
     margin: 0;
     margin-top: 50px;
